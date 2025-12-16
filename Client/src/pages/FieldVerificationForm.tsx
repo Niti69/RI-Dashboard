@@ -224,7 +224,7 @@ export default function FieldVerificationForm(): JSX.Element {
         }
         try {
             setLoading(true);
-            const res = await fetch(`http://localhost:5001/api/applications/${id}`);
+            const res = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/applications/${id}`);
             if (!res.ok) throw new Error("Failed to load application");
             const data = await res.json();
             setApplication(data.data || data);
@@ -269,7 +269,7 @@ export default function FieldVerificationForm(): JSX.Element {
 
   try {
     const res = await fetch(
-      "http://localhost:5001/api/field-verification/schedule",
+      "https://ri-dashboard-tl5e.onrender.com/api/field-verification/schedule",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -542,7 +542,7 @@ export default function FieldVerificationForm(): JSX.Element {
                 if (v.photoPlate) submitForm.append(`vehicleData[${idx}][photoPlate]`, v.photoPlate);
             });
 
-            const res = await fetch("http://localhost:5001/api/field-verification/submit", {
+            const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/field-verification/submit", {
                 method: "POST",
                 body: submitForm,
             });
