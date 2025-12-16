@@ -15,7 +15,7 @@ import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { z } from "zod";
 
-const API_BASE ="http://localhost:5001";
+const API_BASE ="https://ri-dashboard-tl5e.onrender.com";
 
 
 const loginSchema = z.object({
