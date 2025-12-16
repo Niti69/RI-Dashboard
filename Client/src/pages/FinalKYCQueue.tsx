@@ -33,7 +33,7 @@ const FinalKYCQueue = () => {
 
   const fetchApplications = async () => {
     try {
-      const res = await fetch("http://localhost:5001/api/application");
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/application");
       const data = await res.json();
 
       // Only Step 3 pending: status === "Under Review"
