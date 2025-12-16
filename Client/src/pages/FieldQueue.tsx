@@ -33,7 +33,7 @@ const FieldQueue = () => {
 
   const fetchApplications = async () => {
     try {
-      const res = await fetch("http://localhost:5001/api/applications"); // << combined list route
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/applications"); // << combined list route
       const data = await res.json();
 
       if (!data.success) throw new Error("API returned error");
