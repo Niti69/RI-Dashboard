@@ -29,7 +29,7 @@ const SetPassword = () => {
       setLoading(true);
 
       const res = await fetch(
-        `http://localhost:5001/api/auth/set-password/${token}`,
+        `https://ri-dashboard-tl5e.onrender.com/api/auth/set-password/${token}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
