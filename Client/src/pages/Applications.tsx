@@ -42,7 +42,7 @@ const Applications = () => {
 
   // Fetch data from backend
   useEffect(() => {
-    fetch("http://localhost:5001/api/application")
+    fetch("https://ri-dashboard-tl5e.onrender.com/api/application")
       .then((res) => res.json())
       .then((data: Application[]) => {
         setApplications(data);
