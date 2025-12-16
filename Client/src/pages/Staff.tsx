@@ -45,7 +45,7 @@ interface StaffProfile {
    API HELPERS
 ============================ */
 
-const API_BASE = "http://localhost:5001/api";
+const API_BASE = "https://ri-dashboard-tl5e.onrender.com";
 
 const authHeader = () => ({
   Authorization: `Bearer ${localStorage.getItem("staffToken")}`,
