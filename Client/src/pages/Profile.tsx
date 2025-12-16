@@ -36,7 +36,7 @@ const Profile = () => {
         }
 
         const res = await fetch(
-          `http://localhost:5001/api/staff/${id}`,
+          `https://ri-dashboard-tl5e.onrender.com/api/staff/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
