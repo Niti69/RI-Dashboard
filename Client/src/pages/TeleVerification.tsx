@@ -127,7 +127,7 @@ const TeleVerification = () => {
 
   const loadApplication = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:5001/api/application/${id}`);
+      const res = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/application/${id}`);
       const json: ApplicationResponse = await res.json();
 
       if (!json.success || !json.application) {
@@ -161,7 +161,7 @@ const TeleVerification = () => {
 
   const loadTeleLog = async (applicationNumber: string) => {
     try {
-      const res = await fetch(`http://localhost:5001/api/tele/log/${applicationNumber}`);
+      const res = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/tele/log/${applicationNumber}`);
       const json = await res.json();
 
       if (json.success && json.log) {
@@ -241,7 +241,7 @@ const TeleVerification = () => {
     setSaving(true);
 
     try {
-      const res = await fetch("http://localhost:5001/api/tele/submit", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/tele/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
