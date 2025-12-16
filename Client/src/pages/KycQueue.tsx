@@ -33,7 +33,7 @@ const KycQueue = () => {
   // Fetch from your Node API
   const fetchApplications = async () => {
     try {
-      const res = await fetch("http://localhost:5001/api/application");
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/application");
       const data: Application[] = await res.json();
 
       // ONLY show the statuses you want in KYC Queue
