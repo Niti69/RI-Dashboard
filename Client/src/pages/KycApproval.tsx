@@ -178,7 +178,7 @@ export default function KycApproval() {
   const loadApplication = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:5001/api/kyc-approval/${id}`);
+      const res = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/kyc-approval/${id}`);
       const data = await res.json();
 
       if (!data.success) throw new Error("Application not found");
@@ -220,7 +220,7 @@ export default function KycApproval() {
         return;
       }
 
-      const res = await fetch("http://localhost:5001/api/kyc-approval/approve", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/kyc-approval/approve", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -257,7 +257,7 @@ export default function KycApproval() {
     try {
       setSaving(true);
 
-      const res = await fetch("http://localhost:5001/api/kyc-approval/reject", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/kyc-approval/reject", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -294,7 +294,7 @@ export default function KycApproval() {
     try {
       setSaving(true);
 
-      const res = await fetch("http://localhost:5001/api/kyc-approval/hold", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/kyc-approval/hold", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
