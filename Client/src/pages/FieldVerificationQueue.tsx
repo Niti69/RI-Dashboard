@@ -35,7 +35,7 @@ export default function FieldVerificationQueue() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5001/api/application");
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/application");
       const data: Application[] = await res.json();
 
       // Filter FIELD VERIFICATION QUEUE
