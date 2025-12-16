@@ -168,7 +168,7 @@ const KYCApprovalpage: React.FC<KYCApprovalProps> = ({
    */
   const loadApplication = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:5001/api/application/${id}`);
+      const res = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/application/${id}`);
       const json: ApplicationResponse = await res.json();
 
       if (!json.success) {
@@ -238,7 +238,7 @@ const KYCApprovalpage: React.FC<KYCApprovalProps> = ({
    */
   const loadKYCLog = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:5001/api/kyc/log/${id}`);
+      const res = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/kyc/log/${id}`);
       const json = await res.json();
 
       if (json.success && json.log) {
@@ -311,7 +311,7 @@ const KYCApprovalpage: React.FC<KYCApprovalProps> = ({
     setSaving(true);
 
     try {
-      const res = await fetch("http://localhost:5001/api/kyc/submit", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/kyc/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
