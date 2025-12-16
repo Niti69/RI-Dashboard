@@ -49,7 +49,7 @@ export default function AdminReviewQueue() {
   const fetchApplications = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5001/api/application");
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/application");
       
       if (!res.ok) {
         throw new Error("Failed to fetch applications");
