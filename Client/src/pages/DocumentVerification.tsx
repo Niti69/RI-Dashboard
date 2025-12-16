@@ -19,7 +19,7 @@ import {
    CONSTANTS
 ====================================================== */
 
-const API_BASE ='http://localhost:5001'
+const API_BASE ='https://ri-dashboard-tl5e.onrender.com'
 
 /* ======================================================
    TYPES
