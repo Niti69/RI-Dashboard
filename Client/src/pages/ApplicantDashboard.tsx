@@ -19,7 +19,7 @@ const ApplicantDashboard = () => {
   // ✅ Replace Supabase session check with your backend auth
   const checkAuth = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/me", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/auth/me", {
         credentials: "include",
       });
 
@@ -42,7 +42,7 @@ const ApplicantDashboard = () => {
   // ✅ Replace Supabase DB fetch with your Node API
   const fetchApplication = async (userId: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/applications/${userId}`);
+      const res = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/applications/${userId}`);
 
       if (!res.ok) {
         toast.error("Failed to load application");
@@ -59,7 +59,7 @@ const ApplicantDashboard = () => {
 
   // ✅ Replace Supabase logout with your backend logout
   const handleLogout = async () => {
-    await fetch("http://localhost:5000/api/auth/logout", {
+    await fetch("https://ri-dashboard-tl5e.onrender.com/api/auth/logout", {
       method: "POST",
       credentials: "include",
     });
