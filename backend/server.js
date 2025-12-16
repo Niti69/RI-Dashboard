@@ -20,6 +20,7 @@ const app = express();
 
 const corsOptions = {
   origin: [
+    "https://ri-dashboard-frontend.onrender.com", //Render backend
     "http://localhost:5173",  // (React) 1st project
     "http://localhost:8080"   // (TypeScript)2nd Project
   ],
