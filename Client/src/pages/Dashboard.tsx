@@ -61,7 +61,7 @@ const Dashboard = () => {
         setIsLoading(true);
         try {
             // **NOTE**: Keeping the original API call structure.
-            const res = await fetch("http://localhost:5001/api/dashboard-stats");
+            const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/dashboard-stats");
             const json = await res.json();
 
             if (!json.success) {
