@@ -200,7 +200,7 @@ export default function AdminReview() {
   const fetchApplication = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5001/api/application/${applicationId}`);
+      const response = await fetch(`https://ri-dashboard-tl5e.onrender.com/api/application/${applicationId}`);
       const result: ApiResponse = await response.json();
 
       if (result.success) {
@@ -220,7 +220,7 @@ export default function AdminReview() {
     try {
       setSaving(true);
 
-      const res = await fetch("http://localhost:5001/api/admin/approve", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/admin/approve", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // important if admin auth uses cookies
@@ -253,7 +253,7 @@ export default function AdminReview() {
     try {
       setSaving(true);
 
-      const res = await fetch("http://localhost:5001/api/admin/reject", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/admin/reject", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -286,7 +286,7 @@ export default function AdminReview() {
     try {
       setSaving(true);
 
-      const res = await fetch("http://localhost:5001/api/admin/hold", {
+      const res = await fetch("https://ri-dashboard-tl5e.onrender.com/api/admin/hold", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
